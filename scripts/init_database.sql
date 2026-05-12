@@ -16,16 +16,19 @@ and ensure you have proper backups running this script.
 --Create Database 'Datawarehouse'
 
 USE master;
+GO
 
 -- Drop and recreate the 'Darawareshouse' database
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name= 'Datawareshouse')
 BEGIN
-  ALTER DATABASE Datawareshouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-  DROP DATABASE Datawareshouse;
+  ALTER DATABASE Datawarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+  DROP DATABASE Datawarehouse;
 END,
  GO 
 
---CREATE DATABASE Datawareshouse
+--CREATE DATABASE Datawarehouse
+  CREATE DATABASE Datawarehouse;
+  GO
 
 USE Datawareshouse
 
